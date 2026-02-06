@@ -21,36 +21,24 @@ Groq API key
 Project Structure
 ai-expense-tracker/
 
-├── backend/  # Node.js + Express backend
-│   ├── src/
+- backend/ (Node.js + Express backend)
+  - src/
+    - services/
+      - ai.service.ts
+    - routes/
+      - expenses.ts
+    - index.ts
+  - package.json
+  - tsconfig.json
 
-│   │   ├── services/
+- mobile/ (React Native / Expo)
+  - src/
+    - services/api/expenses.ts
+  - App.tsx
+  - package.json
+  - tsconfig.json
 
-│   │   │   └── ai.service.ts
-
-│   │   ├── routes/
-
-│   │   │   └── expenses.ts
-
-│   │   └── index.ts
-
-│   ├── package.json
-
-│   └── tsconfig.json
-
-├── mobile/           # React Native (Expo) mobile app
-
-│   ├── src/
-
-│   │   └── services/api/expenses.ts
-
-│   ├── App.tsx
-
-│   ├── package.json
-
-│   └── tsconfig.json
-
-└── .env              # Contains GROQ_API_KEY
+- .env (Contains GROQ_API_KEY)
 
 Setup Backend
 Navigate to the backend folder:
